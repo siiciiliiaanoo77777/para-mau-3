@@ -4,25 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para Mi Amor</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            margin: 5px;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Para Mi Amor</h1>
-        <p id="message">Esta página es un pequeño detalle para mostrarte cuánto te amo. Eres lo mejor que me ha pasado.</p>
+    <h1>Para mau</h1>
+    <p>Eres lo mejor que me ha pasado. te amo con todo mi corazon,no sabes lo feliz que me haces cuando estoy contigo,mi niña hay tantas cosas bonitas que quiero decirte,porque te mereces todo lo bonito de este mundo y mas,que hice para tenerte en mi vida,tus mensajes me hacen increiblemente felizz,gracias por hacerme este tiempo que llevo hablando contigo la persona mas feliz de mundo no se como describir todo lo que siento por tu,un teamo nunca sera suficiente para decirte lo cuanto teamo,eres y siempre seras mi persona favorita,me encanta todo de ti eres una persona maravillosa,increible y no dejes que nadie te diga lo contrario,te prometo que hare lo mejor para que seas feliz,gracias por aparecer en mi vida,nunca habia amado a alguien asi como te amo ati,eres la persona que me gusta y que es lo mas importante en mi vida,mi corazon es completamente tuyo,por ultimo,te amo con toda mi alma amor de mi vida eres tu y solamente tu</p>
 
-        <!-- Galería de Imágenes -->
-        <div class="gallery">
-            <img src="imagen1.jpg" alt="Imagen 1">
-            <img src="imagen2.jpg" alt="Imagen 2">
-            <img src="imagen3.jpg" alt="Imagen 3">
-        </div>
+    <!-- Botón para reproducir canción -->
+    <button onclick="playSong()">ñau</button>
+    <audio id="love-song" src="lo-que-siento.mp3"></audio>
 
-        <!-- Botón para reproducir canción -->
-        <button onclick="playSong()">Reproducir "Lo Que Siento" de Cuco</button>
-        <audio id="love-song" src="cancion.mp3"></audio>
-    </div>
-
-    <script src="script.js"></script>
+    <script>
+        function playSong() {
+            const song = document.getElementById('love-song');
+            if (song) {
+                if (song.paused) {
+                    song.play();
+                } else {
+                    song.pause();
+                }
+            } else {
+                console.error('El elemento de audio no se encontró.');
+            }
+        }
+    </script>
 </body>
 </html>
